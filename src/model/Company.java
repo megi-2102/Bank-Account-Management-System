@@ -21,4 +21,4 @@ public class Company extends Customer{
                 account.withdraw(amount * 2);
         }
 	}
-	}
+}
