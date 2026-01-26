@@ -1,5 +1,10 @@
 package model;
 
+/**
+ * Abstract representation of a bank account.
+ * Provides common balance operations and ID generation.
+ */
+
 public abstract class Account {
 	
 	private final long ACCOUNT_ID;
@@ -19,6 +24,8 @@ public abstract class Account {
 	
 	public void deposit(double amount)
 	{
+		if(amount <= 0)
+			return;
 		balance += amount;
 	}
 	

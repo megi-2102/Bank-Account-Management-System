@@ -1,5 +1,7 @@
 package model;
 
+// Savings account that prevents overdrafts and supports interest.
+
 public class SavingsAccount extends Account{
 	
 	private double interestRate;

@@ -5,6 +5,8 @@ import java.util.List;
 
 import model.*;
 
+//Coordinates creation and removal of customers and accounts.
+
 public class AccountController {
 	private List<Customer> customers = new ArrayList<Customer>();
 	private List<Account> accounts = new ArrayList<Account>();
@@ -47,7 +49,7 @@ public class AccountController {
 	
 	public void removeAccount(Account account)
 	{
-	    accounts.remove(account);
+		accounts.remove(account);
 	    for (Customer c : customers) {
 	        c.removeAccount(account);
 	    }
