@@ -25,7 +25,6 @@ public class AccountController {
 		return customer;
 	}
 
-	
 	public Account createAccount(Customer customer, String type)
 	{
         Account account;
@@ -62,10 +61,4 @@ public class AccountController {
 	public List<Account> getAccounts() {
 		return accounts;
 	}
-
-	
-	
-	
-	
-	
 }
