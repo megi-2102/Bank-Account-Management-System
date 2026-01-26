@@ -19,7 +19,6 @@ public class SavingsAccount extends Account{
 			return 0;
 		balance -= amount;
 		return amount;
-
 	}
 	
 	// Adds interest to the current balance based on interestRate.

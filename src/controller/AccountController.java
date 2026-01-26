@@ -26,9 +26,8 @@ public class AccountController {
 			throw new IllegalArgumentException("Invalid customer type");
 		customers.add(customer); // Adds the new customer to the managed list
 		return customer;
-		}
+	}
 
-	
 	public Account createAccount(Customer customer, String type)
 	{
         Account account;
