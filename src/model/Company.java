@@ -22,7 +22,7 @@ public class Company extends Customer{
                 account.withdraw(amount);
             else if (account instanceof SavingsAccount) 
                 account.withdraw(amount * 2);
-            }
+            
         }
 	}
 }
