@@ -23,7 +23,7 @@ public class AccountController {
 			throw new IllegalArgumentException("Invalid customer type");
 		customers.add(customer);
 		return customer;
-		}
+	}
 
 	
 	public Account createAccount(Customer customer, String type)
