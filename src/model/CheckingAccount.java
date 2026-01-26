@@ -4,9 +4,9 @@ package model;
 
 public class CheckingAccount extends Account{
 	
-	private int nextCheckNumber = 1;
+	private int nextCheckNumber = 1; // Tracks next check number.
 
 	public int getNextCheckNumber() {
-		return nextCheckNumber++;
+		return nextCheckNumber++; // Returns and increments check number.
 	}
 }

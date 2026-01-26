@@ -10,6 +10,12 @@ public class Person extends Customer{
 	public Person(String name, String address) {
 		super(name, address);
 	}
+	
+    /**
+     * Charges all accounts owned by this person.
+     * For a Person, the same fixed amount is withdrawn from each account.
+     * This implements the abstract method from Customer.
+     */
 
 	@Override
 	public void chargeAllAccounts(double amount)

@@ -7,21 +7,25 @@ package model;
 
 public abstract class Account {
 	
-	private final long ACCOUNT_ID;
+	private final long ACCOUNT_ID; // Unique identifier for each account, assigned automatically.
 	private static long nextAccountId = 1_000;
 	protected double balance;
 	
 	public Account() {
+		
+		// Assign a unique ID when an account is created by incrementing by 5.
 		this.ACCOUNT_ID = nextAccountId;
 		nextAccountId += 5;
 	}
 	
+	// Basic withdrawal operation.
 	public double withdraw(double amount)
 	{
 		balance -= amount;	
 		return amount;
 	}
 	
+	// Basic deposit operation; ignores non-positive values
 	public void deposit(double amount)
 	{
 		if(amount <= 0)
@@ -29,6 +33,7 @@ public abstract class Account {
 		balance += amount;
 	}
 	
+	// Directly corrects the balance.
 	public void correctBalance(double amount)
 	{
 		balance = amount;
@@ -45,11 +50,4 @@ public abstract class Account {
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
-
-
-	
-	
-	
-	
-
 }

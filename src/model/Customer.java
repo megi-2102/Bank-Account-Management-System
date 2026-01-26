@@ -11,7 +11,7 @@ import java.util.List;
 
 public abstract class Customer {
 	
-	private final long CUSTOMER_ID;
+	private final long CUSTOMER_ID; // Unique identifier for each customer, automatically assigned.
 	private static long nextCustomerId = 2_000_000;
 	private String name;
 	private String address;
@@ -29,11 +29,13 @@ public abstract class Customer {
 		this.address = address;
 	}
 	
+    // Adds an account to this customer's list.
 	public void addAccount(Account account)
 	{
 		accounts.add(account);
 	}
 	
+	// Removes an account from this customer's list.
 	public void removeAccount(Account account)
 	{
 		accounts.remove(account);
@@ -41,7 +43,7 @@ public abstract class Customer {
 	
     /**
      * Applies a charge to the customer's accounts.
-     * Charging rules depend on the concrete customer type.
+     * Charging rules depend on the concrete customer type (Person, Company).
      */
 	
 	public abstract void chargeAllAccounts(double amount);
@@ -71,7 +73,4 @@ public abstract class Customer {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
-
-
 }

@@ -15,13 +15,16 @@ public class AccountController {
 	{
 		Customer customer;
 		
+        // Dynamically decides which subclass of Customer to instantiate based on the 'type' argument.
+        // This allows handling both individuals (Person) and organizations (Company) using polymorphism.
+		
 		if(type.equalsIgnoreCase("person"))
 			customer = new Person(name, address);
 		else if(type.equalsIgnoreCase("company"))
 			customer = new Company(name, address); 
 		else
 			throw new IllegalArgumentException("Invalid customer type");
-		customers.add(customer);
+		customers.add(customer); // Adds the new customer to the managed list
 		return customer;
 		}
 
@@ -29,6 +32,8 @@ public class AccountController {
 	public Account createAccount(Customer customer, String type)
 	{
         Account account;
+        
+        // Chooses the account type. SavingsAccount is initialized with a default balance of 0.
         if (type.equalsIgnoreCase("checking")) {
             account = new CheckingAccount();
         } else if (type.equalsIgnoreCase("savings")) {
@@ -37,16 +42,18 @@ public class AccountController {
             throw new IllegalArgumentException("Invalid account type");
         }
         accounts.add(account);
-        customer.addAccount(account);
+        customer.addAccount(account); // Links the account to the corresponding customer.
         return account;
 	}
 	
+	// Ensures all accounts of this customer are  removed together with the customer. 
 	public void removeCustomer(Customer customer)
 	{
         accounts.removeAll(customer.getAccounts());
         customers.remove(customer);
 	}
 	
+	// Removes an account and iterates through all customers to remove this account reference.
 	public void removeAccount(Account account)
 	{
 		accounts.remove(account);
@@ -62,10 +69,4 @@ public class AccountController {
 	public List<Account> getAccounts() {
 		return accounts;
 	}
-
-	
-	
-	
-	
-	
 }
