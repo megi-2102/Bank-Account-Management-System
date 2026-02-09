@@ -35,7 +35,7 @@ class SafetyDepositBoxServiceTest {
 	 @Test
 	 void shouldReuseReleasedSafetyDepositBox() {
 		 SafetyDepositBoxService.setNumberOfSafetyDepositBox(2);
-	     SafetyDepositBoxService service = SafetyDepositBoxService.getInstance();
+	     service = SafetyDepositBoxService.getInstance();
 	     SafetyDepositBox box1 = service.allocateSafetyDepositBox();
 	     box1.setAllotted(false); //Simulate released but still in pool
 	     SafetyDepositBox reusedBox = service.allocateSafetyDepositBox();
@@ -148,7 +148,7 @@ class SafetyDepositBoxServiceTest {
     
     @Test
     void shouldThrowExceptionWhenReleasingNullSafetyDepositBox() {
-    	SafetyDepositBoxService service = SafetyDepositBoxService.getInstance();
+    	service = SafetyDepositBoxService.getInstance();
     	IllegalArgumentException ex = assertThrows(
     			IllegalArgumentException.class,
     			() -> service.releaseSafetyDepositBox(null)
@@ -159,7 +159,7 @@ class SafetyDepositBoxServiceTest {
     @Test
     void shouldCountAvailableSafetyDepositBoxesCorrectly() {
     	SafetyDepositBoxService.setNumberOfSafetyDepositBox(2);
-    	SafetyDepositBoxService service = SafetyDepositBoxService.getInstance();
+    	service = SafetyDepositBoxService.getInstance();
     	SafetyDepositBox box1 = service.allocateSafetyDepositBox();
     	SafetyDepositBox box2 = service.allocateSafetyDepositBox();
 
