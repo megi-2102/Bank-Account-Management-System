@@ -71,14 +71,16 @@ This project follows Test-Driven Development (TDD):
 ---
 
 ## 📂 Project Structure
+```
 src/
 ├── service/
-│ ├── FeeCalculatorServiceImpl
-│ ├── AccountServiceImpl
-│ └── SafetyDepositBoxService
+│   ├── FeeCalculatorServiceImpl
+│   ├── AccountServiceImpl
+│   └── SafetyDepositBoxService
 ├── dao/
 ├── model/
 └── test/
+```
 
 ---
 
