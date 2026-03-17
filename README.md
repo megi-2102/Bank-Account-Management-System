@@ -1,10 +1,10 @@
 # 🏦 Banking System – Java (TDD, Design Patterns, Multithreading)
 
 ## 📖 Overview
-This project is a Java-based banking system developed using **Test-Driven Development (TDD)** principles.  
+This project is a Java-based banking system developed using Test-Driven Development (TDD) principles.  
 It implements core banking functionalities such as account management, fee calculation, and safety deposit box allocation.
 
-The project demonstrates strong understanding of **object-oriented programming, clean code practices, design patterns, and concurrency**.
+The project demonstrates strong understanding of object-oriented programming, clean code practices, design patterns, and concurrency.
 
 ---
 
@@ -24,27 +24,27 @@ Calculates account fees based on balance ranges:
 - Create new accounts  
 - Delete existing accounts  
 - Retrieve list of accounts  
-- Uses **DAO pattern** for data handling  
+- Uses DAO pattern for data handling  
 
 ---
 
 ### 🔐 Safety Deposit Box System
 - Allocate and release safety deposit boxes  
 - Implements:
-  - **Singleton pattern**
-  - **Object Pool pattern**
-  - **Thread-safe operations (synchronization)**
+  - Singleton pattern
+  - Object Pool pattern
+  - Thread-safe operations (synchronization)
 - Supports concurrent access using multithreading  
 - Handles waiting when no boxes are available  
 
 ---
 
 ## 🧪 Testing
-This project follows **Test-Driven Development (TDD)**:
+This project follows Test-Driven Development (TDD):
 
 - Unit tests written using:
-  - **JUnit**
-  - **Mockito**
+  - JUnit
+  - Mockito
 - Covers:
   - Fee calculation logic  
   - Account service behaviour  
@@ -71,3 +71,37 @@ This project follows **Test-Driven Development (TDD)**:
 ---
 
 ## 📂 Project Structure
+src/
+├── service/
+│ ├── FeeCalculatorServiceImpl
+│ ├── AccountServiceImpl
+│ └── SafetyDepositBoxService
+├── dao/
+├── model/
+└── test/
+
+---
+
+## ▶️ How to Run
+1. Clone the repository:
+   git clone https://github.com/your-username/your-repo.git
+2. Open the project in an IDE (IntelliJ / Eclipse)  
+3. Run the tests using JUnit  
+
+---
+
+## 🎯 Learning Outcomes
+- Writing clean and maintainable Java code  
+- Applying design patterns in real-world scenarios  
+- Implementing thread-safe systems  
+- Using TDD for reliable software development  
+
+---
+
+## 📌 Note
+This project was developed as part of an FDM training program.
+
+---
+
+## 👩‍💻 Author
+**Megi Belba**
